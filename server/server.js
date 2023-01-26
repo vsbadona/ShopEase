@@ -24,7 +24,7 @@ app.use('/contact',contactRoutes)
 app.use('/cart',cartRoutes)
 app.use('/address',addressRoutes)
 app.use('/order',orderRoutes)
-app.listen(5000,()=>console.log("App Works On http://localhost:5000"))
+app.listen(process.env.PORT || 5000,()=>console.log("App Works On http://localhost:5000"))
 
 mongoose.connect(process.env.CONNECTION_URL)
 mongoose.set('strictQuery', true)
